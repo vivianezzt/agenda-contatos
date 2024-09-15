@@ -1,53 +1,16 @@
-import styled from 'styled-components';
+import React from 'react'
+import ContactForm from './components/ContactForm'
+import ContactList from './components/ContactList'
+import { AppContainer } from './styles'
 
-export const FormContainer = styled.form`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-`;
+const App: React.FC = () => {
+  return (
+    <AppContainer>
+      <h1>Lista de Contatos</h1>
+      <ContactForm />
+      <ContactList />
+    </AppContainer>
+  )
+}
 
-export const Input = styled.input`
-  padding: 10px;
-  margin: 5px;
-  width: 300px;
-  font-size: 1rem;
-`;
-
-export const Button = styled.button`
-  padding: 10px 20px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  cursor: pointer;
-  margin-top: 10px;
-  font-size: 1rem;
-
-  &:hover {
-    background-color: #0056b3;
-  }
-`;
-
-export const ContactContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  margin: 10px;
-  border: 1px solid #ddd;
-  width: 400px;
-`;
-
-export const ListContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-export const AppContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-`;
+export default App
