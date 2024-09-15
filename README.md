@@ -1,5 +1,5 @@
 
-### Informações Relevantes no `README.md`:
+### Agenda de contatos:
 
 - **Descrição do projeto**:
 Construíndo uma agenda de contatos com react, styled-components, redux
@@ -14,13 +14,53 @@ Construíndo uma agenda de contatos com react, styled-components, redux
 - adição;
 - remoção;
 - edição dos itens da lista de contatos.
+<br>
+1. **Clone o repositório:**
+<br>
+   ```
+   git clone https://github.com/vivianezzt/agenda-contatos
+   ```
 
-- **Funcionalidades**: Detalha as principais funcionalidades da aplicação.
-- **Tecnologias**: Lista as principais tecnologias utilizadas no projeto.
+2. **Instale as dependências:**
+<br>
+   ```
+   cd lista-contatos
+   npm install
+   ```
+
+3. **Execute o aplicativo:**
+<br>
+   ```
+   npm start
+   ```
+4. **Acesse o aplicativo:**
+
+   Abra [http://localhost:3000](http://localhost:3000) no seu navegador.
+
+- **Funcionalidades**:
+
+- Adiciona contatos
+- Remove contatos
+- Atualiza contatos
+<br>
+- **Tecnologias**:
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)
+![Styled-components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
+<br>
 - **Estrutura do Projeto**:
-<img src="./src/assets/img-2.png">
-- **Passos de Configuração**: Explica como instalar e rodar o projeto localmente.
+
 - **Redux**: Descreve o gerenciamento de estado usando Redux.
-- **Styled Components**: Aborda como os estilos foram gerenciados.
-- **Contribuição**: Orientações para quem deseja contribuir com o projeto.
+- **Styled-components:** Uma biblioteca para React e React Native que permite escrever estilos CSS em JavaScript.
+- **Redux:** Uma biblioteca previsível para gerenciar o estado da aplicação.
+- **React Router Dom:** Um roteador para React que permite navegação declarativa e baseada em componentes.
+
+<img src="./src/assets/img-2.png">
+
+- **Passos de Configuração**:
+
+
+  ``npm start``
+
 
