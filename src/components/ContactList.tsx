@@ -6,9 +6,9 @@ import {
   ListContainer,
   ButtonRemove,
   ButtonEdit
-} from '../styles'
+} from '../styles/styles'
 import { RootState } from '../reducers/store'
-import { Contact } from '../types'
+import { Contact } from '../models/types'
 import { removeContact } from '../reducers/ContactsSlice'
 
 const ContactList: React.FC = () => {

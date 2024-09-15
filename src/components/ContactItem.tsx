@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { removeContact } from '../reducers/ContactsSlice'
-import { ContactContainer, Button } from '../styles'
+import { ContactContainer, Button } from '../styles/styles'
 
 interface ContactItemProps {
   id: number

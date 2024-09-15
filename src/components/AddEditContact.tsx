@@ -3,8 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate, useParams } from 'react-router-dom'
 import { RootState } from '../reducers/store'
 import { addContact, editContact } from '../reducers/ContactsSlice'
-import { Contact } from '../types'
-import { FormContainer, Input, Button } from '../styles'
+import { FormContainer, Input, Button } from '../styles/styles'
 
 const AddEditContact: React.FC = () => {
   const { id } = useParams<{ id: string }>()

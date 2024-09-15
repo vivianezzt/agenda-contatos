@@ -114,17 +114,27 @@ export const AppContainer = styled.div`
   height: 100vh;
   background-color: #1c1c1c;
 `
+
 export const ButtonEdit = styled.button`
+  display: inline-block;
+  flex-direction: column;
+  align-itens: right;
   padding: 8px 16px;
-  background-color: #28a745;
+  background-color: #483d8b;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 10px;
-  margin-right: 10px;
   font-size: 0.9rem;
   transition: background-color 0.3s ease;
+
+  FormContainer {
+    color: #ffff;
+    font-weight: bold;
+  }
+  input {
+    color: #fff;
+  }
 
   &:hover {
     background-color: #218838;

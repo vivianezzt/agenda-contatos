@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import ContactList from './components/ContactList'
 import AddEditContact from './components/AddEditContact'
-import { AppContainer } from './styles'
+import { AppContainer } from './styles/styles'
 
 const App: React.FC = () => {
   return (
