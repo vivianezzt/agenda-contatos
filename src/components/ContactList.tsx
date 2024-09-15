@@ -1,23 +1,46 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
+import {
+  ContactContainer,
+  ListContainer,
+  ButtonRemove,
+  ButtonEdit
+} from '../styles'
 import { RootState } from '../reducers/store'
-import ContactItem from './ContactItem'
-import { ListContainer } from '../styles'
+import { Contact } from '../types'
+import { removeContact } from '../reducers/ContactsSlice'
 
 const ContactList: React.FC = () => {
   const contacts = useSelector((state: RootState) => state.contacts.contacts)
+  const dispatch = useDispatch()
+
+  const handleRemove = (id: number) => {
+    dispatch(removeContact(id))
+  }
 
   return (
     <ListContainer>
-      {contacts.map((contact) => (
-        <ContactItem
-          key={contact.id}
-          id={contact.id}
-          name={contact.name}
-          email={contact.email}
-          phone={contact.phone}
-        />
+      {contacts.map((contact: Contact) => (
+        <ContactContainer key={contact.id}>
+          <div>
+            <strong>{contact.name}</strong>
+            <p>{contact.email}</p>
+            <span>{contact.phone}</span>
+          </div>
+          <div>
+            <Link to={`/edit/${contact.id}`}>
+              <ButtonEdit>Editar</ButtonEdit>
+            </Link>
+            <ButtonRemove onClick={() => handleRemove(contact.id)}>
+              Remover
+            </ButtonRemove>
+          </div>
+        </ContactContainer>
       ))}
+      <Link to="/add">
+        <ButtonEdit>Adicionar Novo Contato</ButtonEdit>
+      </Link>
     </ListContainer>
   )
 }

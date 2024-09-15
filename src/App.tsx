@@ -1,15 +1,20 @@
 import React from 'react'
-import ContactForm from './components/ContactForm'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import ContactList from './components/ContactList'
+import AddEditContact from './components/AddEditContact'
 import { AppContainer } from './styles'
 
 const App: React.FC = () => {
   return (
-    <AppContainer>
-      <h1>Lista de Contatos</h1>
-      <ContactForm />
-      <ContactList />
-    </AppContainer>
+    <Router>
+      <AppContainer>
+        <Routes>
+          <Route path="/" element={<ContactList />} />
+          <Route path="/edit/:id" element={<AddEditContact />} />
+          <Route path="/add" element={<AddEditContact />} />
+        </Routes>
+      </AppContainer>
+    </Router>
   )
 }
 
